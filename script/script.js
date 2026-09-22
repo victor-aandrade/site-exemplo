@@ -49,7 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
+/*
+ * FECHAR MENU COM A TECLA ESC
+ */
 
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape" && menu?.classList.contains("menu-aberto")) {
+
+        menu.classList.remove("menu-aberto");
+
+        if (botaoMenu) {
+            botaoMenu.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+
+    }
+
+});
 
     /*
      * FORMULÁRIO DE CADASTRO
