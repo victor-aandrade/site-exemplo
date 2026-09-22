@@ -1,0 +1,774 @@
+/* ==================================================
+   DESIGN SYSTEM
+   ================================================== */
+
+:root {
+
+    /* Cores principais */
+    --cor-primaria: #2e7d32;
+    --cor-primaria-escura: #1b5e20;
+    --cor-primaria-clara: #43a047;
+
+    /* Cores neutras */
+    --cor-fundo: #f4f7f5;
+    --cor-branco: #ffffff;
+    --cor-fundo-claro: #fafafa;
+    --cor-borda: #dddddd;
+
+    /* Cores de texto */
+    --cor-texto: #333333;
+    --cor-texto-secundario: #555555;
+
+    /* Tipografia */
+    --fonte-pequena: 0.875rem;
+    --fonte-normal: 1rem;
+    --fonte-media: 1.125rem;
+    --fonte-grande: 1.5rem;
+    --fonte-titulo: 2rem;
+
+    /* Espaçamentos */
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 40px;
+
+    /* Outros */
+    --raio: 8px;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ==================================================
+   RESET
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: var(--cor-fundo);
+
+    color: var(--cor-texto);
+
+    font-size: var(--fonte-normal);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+/* ==================================================
+   CABEÇALHO
+   ================================================== */
+
+.cabecalho {
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+}
+
+
+.container-cabecalho {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        var(--espaco-2)
+        var(--espaco-3);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.container-cabecalho h1 {
+
+    font-size: var(--fonte-grande);
+
+}
+
+
+/* ==================================================
+   MENU
+   ================================================== */
+
+.menu-principal {
+
+    background-color:
+        var(--cor-primaria-escura);
+
+}
+
+
+.menu-principal ul {
+
+    list-style: none;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: flex;
+
+}
+
+
+.menu-principal a {
+
+    display: block;
+
+    padding:
+        var(--espaco-2)
+        var(--espaco-3);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.menu-principal a:hover,
+.menu-principal a:focus {
+
+    background-color:
+        var(--cor-primaria-clara);
+
+}
+
+
+.menu-principal a.ativo {
+
+    background-color:
+        var(--cor-primaria-clara);
+
+}
+
+
+/* ==================================================
+   MENU HAMBÚRGUER
+   ================================================== */
+
+.menu-hamburguer {
+
+    display: none;
+
+    background: transparent;
+
+    border: 2px solid var(--cor-branco);
+
+    color: var(--cor-branco);
+
+    padding: 6px 10px;
+
+    border-radius: var(--raio);
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================================
+   MAIN
+   ================================================== */
+
+main {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin:
+        var(--espaco-5)
+        auto;
+
+}
+
+
+h2 {
+
+    color: var(--cor-primaria-escura);
+
+    margin-bottom: var(--espaco-2);
+
+}
+
+
+p {
+
+    margin-bottom: var(--espaco-2);
+
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.hero {
+
+    background-color: var(--cor-branco);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+
+    margin-bottom: var(--espaco-4);
+
+}
+
+
+.hero img {
+
+    width: 100%;
+
+    max-height: 350px;
+
+    object-fit: cover;
+
+}
+
+
+.hero-conteudo {
+
+    padding: var(--espaco-4);
+
+    text-align: center;
+
+}
+
+
+.hero-conteudo h2 {
+
+    font-size: var(--fonte-titulo);
+
+}
+
+
+/* ==================================================
+   PROJETOS
+   ================================================== */
+
+.projetos-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: var(--espaco-4);
+
+}
+
+
+.projeto-card {
+
+    background-color: var(--cor-branco);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+
+}
+
+
+.projeto-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+.projeto-conteudo {
+
+    padding: var(--espaco-3);
+
+}
+
+
+.projeto-conteudo h2 {
+
+    font-size: var(--fonte-grande);
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+    padding:
+        4px
+        10px;
+
+    border-radius: 20px;
+
+    font-size: var(--fonte-pequena);
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+   ================================================== */
+
+.pagina-formulario {
+
+    max-width: 800px;
+
+}
+
+
+.introducao {
+
+    text-align: center;
+
+    margin-bottom: var(--espaco-4);
+
+}
+
+
+form {
+
+    background-color: var(--cor-branco);
+
+    padding: var(--espaco-4);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+fieldset {
+
+    border: 2px solid var(--cor-primaria);
+
+    border-radius: var(--raio);
+
+    padding: var(--espaco-3);
+
+    margin-bottom: var(--espaco-3);
+
+}
+
+
+legend {
+
+    color: var(--cor-primaria-escura);
+
+    font-weight: bold;
+
+    padding:
+        0
+        var(--espaco-1);
+
+}
+
+
+.campo {
+
+    margin-bottom: var(--espaco-3);
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: var(--espaco-1);
+
+}
+
+
+.campo input,
+.campo select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    font-size: var(--fonte-normal);
+
+    background-color: var(--cor-fundo-claro);
+
+}
+
+
+.campo input:focus,
+.campo select:focus {
+
+    outline: 2px solid var(--cor-primaria-clara);
+
+    border-color: var(--cor-primaria);
+
+}
+
+
+.campo-checkbox {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--espaco-1);
+
+    margin:
+        var(--espaco-3)
+        0;
+
+}
+
+
+.campo-checkbox input {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+/* ==================================================
+   BOTÕES
+   ================================================== */
+
+.botao {
+
+    display: inline-block;
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+    border: none;
+
+    border-radius: var(--raio);
+
+    padding:
+        12px
+        20px;
+
+    font-size: var(--fonte-normal);
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.botao:hover {
+
+    background-color:
+        var(--cor-primaria-escura);
+
+    transform: translateY(-1px);
+
+}
+
+
+.botao:focus {
+
+    outline: 3px solid
+        rgba(46, 125, 50, 0.3);
+
+    outline-offset: 2px;
+
+}
+
+
+.acoes-pagina {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: var(--espaco-2);
+
+    flex-wrap: wrap;
+
+    margin-top: var(--espaco-4);
+
+}
+
+
+.botao-voltar {
+
+    width: fit-content;
+
+}
+
+
+/* ==================================================
+   MENSAGENS
+   ================================================== */
+
+.mensagem {
+
+    padding: var(--espaco-2);
+
+    margin:
+        var(--espaco-2)
+        0;
+
+    border-radius: var(--raio);
+
+    font-weight: bold;
+
+}
+
+
+.mensagem-sucesso {
+
+    background-color: #e8f5e9;
+
+    color: #1b5e20;
+
+    border:
+        1px solid
+        #43a047;
+
+}
+
+
+.mensagem-erro {
+
+    background-color: #ffebee;
+
+    color: #b71c1c;
+
+    border:
+        1px solid
+        #e53935;
+
+}
+
+
+/* ==================================================
+   RODAPÉ
+   ================================================== */
+
+.rodape {
+
+    background-color:
+        var(--cor-primaria-escura);
+
+    color: var(--cor-branco);
+
+    text-align: center;
+
+    padding: var(--espaco-3);
+
+    margin-top: var(--espaco-5);
+
+}
+
+
+.rodape p {
+
+    margin: 0;
+
+    font-size: var(--fonte-pequena);
+
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    .menu-hamburguer {
+
+        display: block;
+
+    }
+
+
+    .menu-principal {
+
+        display: none;
+
+    }
+
+
+    .menu-principal.menu-aberto {
+
+        display: block;
+
+    }
+
+
+    .menu-principal ul {
+
+        flex-direction: column;
+
+    }
+
+
+    .menu-principal a {
+
+        border-top:
+            1px solid
+            rgba(255, 255, 255, 0.15);
+
+    }
+
+
+    .projetos-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero-conteudo {
+
+        padding: var(--espaco-3);
+
+    }
+
+
+    form {
+
+        padding: var(--espaco-3);
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    main {
+
+        width: 94%;
+
+        margin:
+            var(--espaco-3)
+            auto;
+
+    }
+
+
+    .container-cabecalho {
+
+        padding:
+            var(--espaco-2);
+
+    }
+
+
+    .container-cabecalho h1 {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .hero-conteudo h2 {
+
+        font-size: var(--fonte-grande);
+
+    }
+
+
+    .acoes-pagina {
+
+        flex-direction: column;
+
+    }
+
+
+    .acoes-pagina .botao {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
