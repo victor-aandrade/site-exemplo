@@ -772,3 +772,8 @@ legend {
     }
 
 }
+/* Estado de foco dos botões */
+.botao:focus-visible {
+    outline: 3px solid #43a047;
+    outline-offset: 3px;
+}
